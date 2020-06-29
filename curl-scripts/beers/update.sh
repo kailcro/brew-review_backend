@@ -12,8 +12,7 @@ curl "${API}${URL_PATH}/${ID}" \
   "beer": {
     "name": "'"${NAME}"'",
     "type": "'"${TYPE}"'",
-    "brewery": "'"${BREWERY}"'",
-    "owner": "'"${OWNER}"'"
+    "brewery": "'"${BREWERY}"'"
   }
   }'
 
