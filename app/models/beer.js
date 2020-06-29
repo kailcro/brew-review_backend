@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
-const reviewSchema = require('./review').schema
-
+const reviewSchema = require('./review')
+// add .schema to the end of line 2 if having errors
 const beerSchema = new mongoose.Schema({
   name: {
     type: String,
