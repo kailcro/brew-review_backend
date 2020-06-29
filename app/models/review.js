@@ -13,10 +13,6 @@ const reviewSchema = new mongoose.Schema({
     type: Number,
     required: true
   },
-  recommend: {
-    type: Boolean,
-    required: true
-  },
   reviewer: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
