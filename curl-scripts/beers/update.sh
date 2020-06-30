@@ -7,13 +7,13 @@ curl "${API}${URL_PATH}/${ID}" \
   --include \
   --request PATCH \
   --header "Content-Type: application/json" \
---header "Authorization: Bearer ${TOKEN}" \
---data '{
-  "beer": {
-    "name": "'"${NAME}"'",
-    "type": "'"${TYPE}"'",
-    "brewery": "'"${BREWERY}"'"
-  }
+  --header "Authorization: Bearer ${TOKEN}" \
+  --data '{
+    "beer": {
+      "name": "'"${NAME}"'",
+      "type": "'"${TYPE}"'",
+      "brewery": "'"${BREWERY}"'"
+    }
   }'
 
 echo
