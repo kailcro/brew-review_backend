@@ -1,4 +1,4 @@
-# Brew Review Back-End
+# Brew Review Server
 
 ## Technologies Used
 -Express
@@ -7,8 +7,4 @@
 
 ## Planning History
 
-## ERD
-
 ## User Stories
-
-## Wireframes
