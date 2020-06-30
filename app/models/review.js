@@ -23,10 +23,3 @@ const reviewSchema = new mongoose.Schema({
 })
 
 module.exports = reviewSchema
-
-// Maybe add this into schema of review ?
-// beer: {
-//   type: mongoose.Schema.Types.ObjectId,
-//   ref: 'Beer',
-//   required: true
-// },
