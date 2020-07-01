@@ -4,12 +4,15 @@ const router = express.Router()
 const Beer = require('../models/beer')
 const customErrors = require('../../lib/custom_errors')
 const handle404 = customErrors.handle404
+const passport = require('passport')
+const requireToken = passport.authenticate('bearer', { session: false })
 
 // CREATE - post /reviews
-router.post('/reviews', (req, res, next) => {
+router.post('/reviews', requireToken, (req, res, next) => {
 // get the review data from the body of the request
 // get the restaurant ID from the review data
 // find the restaurant by it's ID
+  req.body.review.reviewer = req.user.id
   const reviewData = req.body.review
   const beerId = reviewData.beerId
   Beer.findById(beerId)

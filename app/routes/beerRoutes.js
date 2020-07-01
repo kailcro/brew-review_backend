@@ -30,7 +30,7 @@ router.post('/beers', requireToken, (req, res, next) => {
   Beer.create(beerData)
     // respond to succesful `create` with status 201 and JSON of new "example"
     .then(beer => {
-      res.status(201).json({ b: beer.toObject() })
+      res.status(201).json({ beer: beer.toObject() })
     })
     // if an error occurs, pass it off to our error handler
     // the error handler needs the error message and the `res` object so that it
@@ -68,7 +68,7 @@ router.get('/beers/:id', requireToken, (req, res, next) => {
 router.patch('/beers/:id', requireToken, removeBlanks, (req, res, next) => {
   // if the client attempts to change the `owner` property by including a new
   // owner, prevent that by deleting that key/value pair
-  delete req.body.beer.owne
+  delete req.body.beer.owner
   Beer.findById(req.params.id)
     .then(handle404)
     .then(beer => {
