@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 // keep the Restaurant model because review is within that
 const Beer = require('../models/beer')
+// const Review = require('../models/review')
 const customErrors = require('../../lib/custom_errors')
 const handle404 = customErrors.handle404
 const passport = require('passport')
@@ -26,6 +27,21 @@ router.post('/reviews', requireToken, (req, res, next) => {
     .then(beer => res.json({beer: beer}))
     .catch(next)
 })
+
+// // INDEX - GET /beers
+// router.get('/reviews', requireToken, (req, res, next) => {
+//   Review.find()
+//     .then(reviews => {
+//       // `beers` will be an array of Mongoose documents
+//       // we want to convert each one to a POJO, so we use `.map` to
+//       // apply `.toObject` to each one
+//       return reviews.map(review => review.toObject())
+//     })
+//     // respond with status 200 and JSON of the beers
+//     .then(reviews => res.status(200).json({ reviews: reviews }))
+//     // if an error occurs, pass it to the handler
+//     .catch(next)
+// })
 
 // DESTROY - delete /reviews/:id
 router.delete('/reviews/:id', (req, res, next) => {
