@@ -14,6 +14,10 @@ const beerSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  abv: {
+    type: String,
+    required: true
+  },
   reviews: [reviewSchema],
   owner: {
     type: mongoose.Schema.Types.ObjectId,
