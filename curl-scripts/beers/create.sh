@@ -13,7 +13,7 @@ curl "${API}${URL_PATH}" \
       "name": "'"${NAME}"'",
       "type": "'"${TYPE}"'",
       "brewery": "'"${BREWERY}"'",
-      "ABV": "'"${ABV}"'",
+      "abv": "'"${ABV}"'",
       "owner": "'"${OWNER}"'"
     }
   }'
