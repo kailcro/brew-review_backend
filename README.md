@@ -18,12 +18,3 @@ The original idea came from my love of good beer. The cool thing about beer is t
 My idea was to build an application that for allowed people to read different reviews on beers, allowing them to get a better idea of it's something they would enjoy.
 
 I started with building the backend model for beer and users. I then moved on to building out the model of reviews, which is a subdocument of beer. (Beers can have zero to many reviews). After that I moved onto the client side, to work on my AJAX calls, and finally pulling a solid UI together.
-
-## User Stories
-- User must be able to login
-- User must be able to change password
-- User must be able to post a beer
-- User must be able to edit their beer posting
-- User must be able to review beer
-- User can not delete someone else's beer
-- User can not delete someone else's review
